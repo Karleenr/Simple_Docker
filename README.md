@@ -1,4 +1,4 @@
-## Part 1. Ready-made docker
+# Part 1. Ready-made docker
 
 Взял официальный докер-образ с nginx и выкачал его при помощи ```docker pull```
 
@@ -38,7 +38,7 @@
 
 ![Alt text](src/screenshots/p1.8.png)
 
-## Part 2. Operations with container
+# Part 2. Operations with container
 
 Прочитал конфигурационный файл nginx.conf внутри докер контейнера через команду exec.
 
@@ -87,7 +87,7 @@ nginx: это команда для запуска веб-сервера Nginx.
 
 Проверил, что по адресу localhost:80/status отдается страничка со статусом сервера nginx.
 
-## Part 3. Mini web server
+# Part 3. Mini web server
 
 Запустил контейнер nginx с именем  fcgi_serv и портами 80:80 443:433 81:81
 
@@ -143,7 +143,7 @@ $(docker ps -q) выводит только ID контейнера
 
 ![Alt text](src/screenshots/p3.10.png)
 
-## Part 4. Your own docker
+# Part 4. Your own docker
 
 Написал свой докер-образ, который:
 
@@ -177,7 +177,7 @@ $(docker ps -q) выводит только ID контейнера
 
 ![Alt text](src/screenshots/p4.4.png)
 
-## Part 5. Dockle
+# Part 5. Dockle
 
 Установил Dokcle командой ```brew install goodwithtech/r/dockle```
 
@@ -202,7 +202,7 @@ $(docker ps -q) выводит только ID контейнера
 ```WARN - CIS-DI-0001:``` Create a user for the container указывает на то, что в Dockerfile контейнер по умолчанию запускается от имени пользователя root, что считается небезопасным. Рекомендуется создавать отдельного пользователя для выполнения приложений внутри контейнера, чтобы минимизировать риски безопасности. 
 
 
-## Исправление ошибок:
+# Исправление ошибок:
 
 ```FATAL - DKL-DI-0005:``` добавил в Dockerfile очистку кэша после установки пакетов
 
@@ -228,7 +228,7 @@ $(docker ps -q) выводит только ID контейнера
 
 ```INFO	- CIS-DI-0008:``` Confirm safety of setuid/setgid files
 
-## Part 6. Basic Docker Compose
+# Part 6. Basic Docker Compose
 
 Напишу файл docker-compose.yml, с помощью которого:
 
